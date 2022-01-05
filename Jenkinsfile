@@ -1,10 +1,21 @@
 pipeline {
     agent any
     stages {
-        stage("test") {
+        stage("build") {
             steps {
                 sh 'npm install'
+                sh './hello.sh'
             }
+        }
+        stage("test") {
+        }
+    }
+    post {
+        always {
+
+        }
+        success {
+
         }
     }
 }
