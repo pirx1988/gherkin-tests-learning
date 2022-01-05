@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
+        choice(name: 'environment', choices: ['latest', 'sprint', 'production'], description: 'Environment for tests')
+    }
     stages {
         stage("init") {
             steps {
