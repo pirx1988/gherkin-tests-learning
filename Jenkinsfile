@@ -8,14 +8,22 @@ pipeline {
             }
         }
         stage("test") {
+            steps {
+                echo 'we are running scenario'
+            }
         }
     }
     post {
         always {
+             steps {
+                echo 'finished'
+              }
 
         }
         success {
-
+            steps {
+                echo 'success'
+            }
         }
     }
 }
