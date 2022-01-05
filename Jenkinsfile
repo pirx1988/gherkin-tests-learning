@@ -8,7 +8,7 @@ pipeline {
         stage("init") {
             steps {
                 sh 'npm install'
-                sh './hello.sh'
+                sh "./hello.sh ${params.X_VAULT_TOKEN} ${params.environment}"
             }
         }
         stage("test") {
