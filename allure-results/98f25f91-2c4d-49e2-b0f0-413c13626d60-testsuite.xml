@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1627938871970' stop='1627938871977'>
+    <name>The stream list web app: As a user, I can see list of streams</name>
+    <title>The stream list web app: As a user, I can see list of streams</title>
+    <test-cases>
+        <test-case start='1627938871971' status='passed' stop='1627938871972'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1627938871973' status='broken' stop='1627938871974'>
+            <name>Given I am on the stream list page with the url http://localhost:3000/</name>
+            <title>Given I am on the stream list page with the url http://localhost:3000/</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "I am on the stream list page with the url http://localhost:3000/" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I am on the stream list page with the url http://localhost:3000/" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(/home/krzysztofmichalski/projects/cucumber-gherking-learning/features/stream-list.feature):1:1
+                	at Scenario(As a user, I can see list of streams):3:3
+                	at Step(I am on the stream list page with the url &lt;streamsAppUrl>):5:5
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627938871974' status='broken' stop='1627938871974'>
+            <name>Then I should see a header text Streams</name>
+            <title>Then I should see a header text Streams</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "I should see a header text Streams" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I should see a header text Streams" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(/home/krzysztofmichalski/projects/cucumber-gherking-learning/features/stream-list.feature):1:1
+                	at Scenario(As a user, I can see list of streams):3:3
+                	at Step(I should see a header text &lt;headerText>):6:5
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627938871974' status='passed' stop='1627938871976'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

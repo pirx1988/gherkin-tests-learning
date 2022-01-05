@@ -1,0 +1,165 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1630097914085' stop='1630097920700'>
+    <name>Test End to End User: Validate End to End Get Single User</name>
+    <title>Test End to End User: Validate End to End Get Single User</title>
+    <test-cases>
+        <test-case start='1630097914086' status='passed' stop='1630097914088'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1630097914088' status='passed' stop='1630097920534'>
+            <name>Given I am on the page http://resttesttest.com</name>
+            <title>Given I am on the page http://resttesttest.com</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps>
+                <step start='1630097914091' status='passed' stop='1630097915530'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='530f292a-3381-4acd-b578-989b8f3e6538-attachment.json' type='application/json' size='39'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1630097920534' status='passed' stop='1630097920682'>
+            <name>When I Perform /api/users/2 user search</name>
+            <title>When I Perform /api/users/2 user search</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps>
+                <step start='1630097920537' status='passed' stop='1630097920549'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='1c9ede6a-663b-4a5a-b74f-a9c2fe774a53-attachment.json' type='application/json' size='53'/>
+                        <attachment title='Response' source='45866a56-9ab6-4871-97b7-a1d73e67140c-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1630097920555' status='passed' stop='1630097920587'>
+                    <name>POST /session/:sessionId/element/47acf8a3-4175-4872-8147-ac09709aca1d/clear</name>
+                    <title>POST /session/:sessionId/element/47acf8a3-4175-4872-8147-ac09709aca1d/clear</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1630097920591' status='passed' stop='1630097920637'>
+                    <name>POST /session/:sessionId/element/47acf8a3-4175-4872-8147-ac09709aca1d/value</name>
+                    <title>POST /session/:sessionId/element/47acf8a3-4175-4872-8147-ac09709aca1d/value</title>
+                    <attachments>
+                        <attachment title='Request' source='9a52cd7f-5d26-4106-bfa2-b54b079b36ab-attachment.json' type='application/json' size='45'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1630097920638' status='passed' stop='1630097920647'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='90faddfc-8f7e-4a03-b037-80908885c75b-attachment.json' type='application/json' size='55'/>
+                        <attachment title='Response' source='2a1da926-b9e6-42de-9891-0834d78cbea6-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1630097920650' status='passed' stop='1630097920681'>
+                    <name>POST /session/:sessionId/element/4a48abde-82d6-4506-bd0d-9161e83988d5/click</name>
+                    <title>POST /session/:sessionId/element/4a48abde-82d6-4506-bd0d-9161e83988d5/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1630097920682' status='broken' stop='1630097920698'>
+            <name>And I make Get /api/users/2 api call</name>
+            <title>And I make Get /api/users/2 api call</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: function uses multiple asynchronous interfaces: callback and promise</message>
+                <stack-trace>Error: function uses multiple asynchronous interfaces: callback and promise
+                to use the callback interface: do not return a promise
+                to use the promise interface: remove the last argument to the function
+                    at Object.run (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@cucumber/cucumber/src/user_code_runner.ts:51:16)
+                    at Object.run (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@cucumber/cucumber/src/runtime/step_runner.ts:56:41)
+                    at PickleRunner.invokeStep (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@cucumber/cucumber/src/runtime/pickle_runner.ts:240:12)
+                    at PickleRunner.runStep (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@cucumber/cucumber/src/runtime/pickle_runner.ts:423:20)
+                    at /home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@cucumber/cucumber/src/runtime/pickle_runner.ts:331:20
+                    at PickleRunner.aroundTestStep (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@cucumber/cucumber/src/runtime/pickle_runner.ts:273:28)
+                    at PickleRunner.run (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@cucumber/cucumber/src/runtime/pickle_runner.ts:315:9)
+                    at Runtime.runPickle (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@cucumber/cucumber/src/runtime/index.ts:118:20)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1630097920698' status='undefined'>
+            <name>Then I validate the serach result</name>
+            <title>Then I validate the serach result</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1630097920698' status='pending' stop='1630097920698'>
+            <name>I validate the serach result</name>
+            <title>I validate the serach result</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1630097920698' status='passed' stop='1630097920699'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

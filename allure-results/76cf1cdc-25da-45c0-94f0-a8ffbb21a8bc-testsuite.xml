@@ -1,0 +1,98 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1627906702815' stop='1627906703360'>
+    <name>The stream list web app: As a user, I can see list of streams</name>
+    <title>The stream list web app: As a user, I can see list of streams</title>
+    <test-cases>
+        <test-case start='1627906702816' status='passed' stop='1627906702818'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1627906702818' status='passed' stop='1627906703327'>
+            <name>Given I am on the stream list page with the url http://localhost:3000/</name>
+            <title>Given I am on the stream list page with the url http://localhost:3000/</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps>
+                <step start='1627906702821' status='passed' stop='1627906703221'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='089919cc-b2aa-4447-bc15-98d914e08583-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1627906703221' status='passed' stop='1627906703326'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments>
+                        <attachment title='Response' source='258e694d-e63a-4c48-a3cd-0667dcf03238-attachment.json' type='application/json' size='59'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1627906703328' status='passed' stop='1627906703359'>
+            <name>Then I should see a header text Streams</name>
+            <title>Then I should see a header text Streams</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps>
+                <step start='1627906703329' status='passed' stop='1627906703340'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='ca7a3880-7596-4023-8ffc-8b37cc884972-attachment.json' type='application/json' size='80'/>
+                        <attachment title='Response' source='d5ebc04d-4d7d-4e2e-b7a0-e660435dc955-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1627906703345' status='passed' stop='1627906703357'>
+                    <name>GET /session/:sessionId/element/16951a09-88a3-47f4-90ae-572d3571e117/text</name>
+                    <title>GET /session/:sessionId/element/16951a09-88a3-47f4-90ae-572d3571e117/text</title>
+                    <attachments>
+                        <attachment title='Response' source='3fa1d23f-c6df-4a57-8f86-33c9e81e7e55-attachment.json' type='application/json' size='9'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1627906703360' status='passed' stop='1627906703360'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

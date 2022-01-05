@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#sign-in-button\"}\n  (Session info: chrome=92.0.4515.107)",
+  "stacktrace": "#0 0x563d0e51fab3 <unknown>\n#1 0x563d0e2933d8 <unknown>\n#2 0x563d0e2c8705 <unknown>\n#3 0x563d0e2faa14 <unknown>\n#4 0x563d0e2e591d <unknown>\n#5 0x563d0e2f87fb <unknown>\n#6 0x563d0e2e57e3 <unknown>\n#7 0x563d0e2bc163 <unknown>\n#8 0x563d0e2bd215 <unknown>\n#9 0x563d0e54b98e <unknown>\n#10 0x563d0e55f052 <unknown>\n#11 0x563d0e5602ac <unknown>\n#12 0x563d0e54ca64 <unknown>\n#13 0x563d0e5607da <unknown>\n#14 0x563d0e542fbb <unknown>\n#15 0x563d0e57a2d8 <unknown>\n#16 0x563d0e57a458 <unknown>\n#17 0x563d0e593f3d <unknown>\n#18 0x7fbb141ec609 start_thread\n"
+}

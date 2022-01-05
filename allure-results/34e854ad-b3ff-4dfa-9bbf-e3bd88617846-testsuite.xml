@@ -1,0 +1,110 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1627902518859' stop='1627902520517'>
+    <name>The Internet website homepage: As a user, I can open internet website</name>
+    <title>The Internet website homepage: As a user, I can open internet website</title>
+    <test-cases>
+        <test-case start='1627902518859' status='passed' stop='1627902518861'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1627902518861' status='passed' stop='1627902520412'>
+            <name>Given I open the browser and load the url https:/the-internet.herokuapp.com/</name>
+            <title>Given I open the browser and load the url https:/the-internet.herokuapp.com/</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps>
+                <step start='1627902518863' status='passed' stop='1627902520299'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='d76d86dc-241f-4d74-a8aa-6f42e29f9d49-attachment.json' type='application/json' size='50'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1627902520299' status='passed' stop='1627902520409'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments>
+                        <attachment title='Response' source='88361aa3-323e-4e5c-a9f1-e61252049507-attachment.json' type='application/json' size='59'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1627902520413' status='failed' stop='1627902520512'>
+            <name>Then I should see a header with text Welcomeddd to the-internet</name>
+            <title>Then I should see a header with text Welcomeddd to the-internet</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps>
+                <step start='1627902520418' status='passed' stop='1627902520451'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='adac900e-f5bf-41fa-98ed-826a313be0c4-attachment.json' type='application/json' size='52'/>
+                        <attachment title='Response' source='eb3d15bf-cb5a-499e-a3dd-cd4726cd127b-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1627902520466' status='passed' stop='1627902520497'>
+                    <name>GET /session/:sessionId/element/7ef43411-27a1-4f54-8e12-df929be442c8/text</name>
+                    <title>GET /session/:sessionId/element/7ef43411-27a1-4f54-8e12-df929be442c8/text</title>
+                    <attachments>
+                        <attachment title='Response' source='41161a44-feb7-4c39-ab18-e149f49b3971-attachment.json' type='application/json' size='25'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toEqual(expected) // deep equality</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: "Welcomeddd to the-internet"
+                Received: "Welcome to the-internet"
+                    at /home/krzysztofmichalski/projects/cucumber-gherking-learning/features/step-definitions/home-steps.ts:10:36
+                    at step (/home/krzysztofmichalski/projects/cucumber-gherking-learning/features/step-definitions/home-steps.ts:33:23)
+                    at Object.next (/home/krzysztofmichalski/projects/cucumber-gherking-learning/features/step-definitions/home-steps.ts:14:53)
+                    at fulfilled (/home/krzysztofmichalski/projects/cucumber-gherking-learning/features/step-definitions/home-steps.ts:5:58)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627902520512' status='passed' stop='1627902520514'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-92.0.4515.107'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
