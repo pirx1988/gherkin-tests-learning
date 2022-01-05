@@ -14,8 +14,8 @@ pipeline {
         stage("test") {
             steps {
                 echo 'we are running scenario'
-                echo "your X_VAULT_TOKEN is: ${X_VAULT_TOKEN}"
-                echo "Build on environment: ${environment}"
+                echo "your X_VAULT_TOKEN is: ${params.X_VAULT_TOKEN}"
+                echo "Build on environment: ${params.environment}"
             }
         }
     }
