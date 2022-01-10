@@ -9,6 +9,7 @@ ENVIRONMENT=$1
 X_VAULT_TOKEN=$2
 SUITE_ACCOUNT=$3
 VAULT_BASE_URL="https://vault-wf1.wfsaas.net"
+ENV_FILENAME=""
 
 case $ENVIRONMENT in
   "latest" )
@@ -30,8 +31,7 @@ CONTENT+=("BASEURL=\"$BASE_APP_URL\"")
 CONTENT+=("ACCOUNT=\"$SUITE_ACCOUNT\"")
 CONTENT+=("VAULT_BASE_URL=\"$VAULT_BASE_URL\"")
 
-ENV_FILENAME=""
 ## Create .env file with parameters passed to script:
-printf "%s\n" "${CONTENT[@]}" > "$ENV_FILENAME"
+printf "%s\n" "${CONTENT[@]}" > $ENV_FILENAME
 
 
