@@ -2,13 +2,14 @@ pipeline {
     agent any
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
+        string(name: 'SUITE_ACCOUNT', defaultValue: '', description: 'Token for connection with Vault')
         choice(name: 'environment', choices: ['latest', 'sprint', 'production'], description: 'Environment for tests')
     }
     stages {
         stage("Initialize") {
             steps {
                 sh 'npm install'
-                sh "./init.sh ${params.environment} ${params.X_VAULT_TOKEN}"
+                sh "./init.sh ${params.environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
         }
         stage("Feature tests") {
