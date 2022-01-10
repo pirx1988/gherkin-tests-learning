@@ -2,7 +2,6 @@
 # $1 - environment
 # $2 - X_VAULT_TOKEN
 # $3 - Suite Account
-echo Creating env file
 
 BASE_APP_URL=""
 ENVIRONMENT=$1
