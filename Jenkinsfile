@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Cleanup") {
                     steps {
-                        sh ''
+                        sh './cleanup.sh'
                     }
                 }
     }
