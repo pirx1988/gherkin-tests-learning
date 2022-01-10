@@ -28,6 +28,6 @@ echo $BASE_APP_URL
 declare -a CONTENT
 CONTENT+=("X_VAULT_TOKEN=\"$X_VAULT_TOKEN\"")
 CONTENT+=("BASEURL=\"$BASE_APP_URL\"")
-printf "%s\n" "${CONTENT[@]}" > $ENV_FILENAME
+printf "%s\n" "${CONTENT[@]}"
 
 
