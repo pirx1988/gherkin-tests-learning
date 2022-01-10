@@ -32,5 +32,5 @@ CONTENT+=("VAULT_BASE_URL=\"$VAULT_BASE_URL\"")
 
 ## Create .env file with parameters passed to script:
 printf "%s\n" "${CONTENT[@]}" > $ENV_FILENAME
-
+cat < ENV_FILENAME
 
