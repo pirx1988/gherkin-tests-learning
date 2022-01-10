@@ -21,6 +21,8 @@ case $ENVIRONMENT in
 
 esac
 echo $BASE_APP_URL
+
+
 ## Create .env file with parameters passed to script:
 
 declare -a CONTENT
