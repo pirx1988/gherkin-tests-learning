@@ -17,6 +17,7 @@ pipeline {
             }
             steps {
                 sh 'node --version'
+                sh 'yarn --version'
             }
         }
         stage('Checkout repository') {
