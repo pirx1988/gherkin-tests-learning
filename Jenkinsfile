@@ -11,7 +11,7 @@ pipeline {
         stage('Docker container initialize') {
             agent {
                 docker {
-                    image 'node:16-stretch'
+                    image 'node:16.13.1-alpine'
                     reuseNode true
                 }
             }
