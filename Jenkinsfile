@@ -8,7 +8,7 @@ pipeline {
 
     }
     stages {
-        stage('Initialize') {
+        stage('Docker container initialize') {
             agent {
                 docker {
                     image 'node:16.13.1-alpine'
@@ -17,8 +17,7 @@ pipeline {
             }
             steps {
                 sh 'node --version'
-                sh 'npm install'
-                sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
+                sh 'yarn --version'
             }
         }
         stage('Checkout repository') {
@@ -27,6 +26,12 @@ pipeline {
                         cleanWs()
                         checkout scm
                     }
+        }
+        stage("Install node modules and create .env") {
+            steps {
+                sh 'npm install'
+                sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
+            }
         }
         stage("Feature tests") {
             steps {
