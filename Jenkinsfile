@@ -8,10 +8,16 @@ pipeline {
 
     }
     stages {
+        stage('Checkout repository') {
+                    steps {
+                        // You can choose to clean workspace before build as follows
+                        cleanWs()
+                        checkout scm
+                    }
+        }
         stage("Initialize") {
             steps {
                 sh 'npm install'
-                cleanWs()
                 sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
         }
@@ -20,11 +26,6 @@ pipeline {
                 echo 'we are running scenarios'
 
             }
-        }
-        stage("Cleanup") {
-                    steps {
-                        sh './cleanup.sh'
-                    }
         }
     }
 }
