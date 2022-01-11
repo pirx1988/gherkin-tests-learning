@@ -15,6 +15,9 @@ pipeline {
                     reuseNode true
                 }
             }
+            steps {
+                sh 'node --version'
+            }
         }
         stage('Checkout repository') {
                     steps {
