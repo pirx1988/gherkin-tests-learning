@@ -11,6 +11,7 @@ pipeline {
         stage("Initialize") {
             steps {
                 sh 'npm install'
+                cleanWs()
                 sh "./init.sh ${params.environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
         }
@@ -25,16 +26,5 @@ pipeline {
                         sh './cleanup.sh'
                     }
         }
-    }
-    post {
-            // Clean after build
-            always {
-                cleanWs(cleanWhenNotBuilt: false,
-                        deleteDirs: true,
-                        disableDeferredWipeout: true,
-                        notFailBuild: true,
-                        patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
-                                   [pattern: '.propsfile', type: 'EXCLUDE']])
-            }
     }
 }
