@@ -8,10 +8,11 @@ pipeline {
 
     }
     stages {
-        stage('Node install') {
+        stage('Build') {
             agent {
                 docker {
                     image 'node:16.13.1-alpine'
+                    reuseNode true
                 }
             }
         }
