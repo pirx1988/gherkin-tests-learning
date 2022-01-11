@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 cleanWs()
-                sh "./init.sh ${params.environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
+                sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
         }
         stage("Feature tests") {
