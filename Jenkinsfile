@@ -8,7 +8,7 @@ pipeline {
 
     }
     stages {
-        stage('Build') {
+        stage('Initialize') {
             agent {
                 docker {
                     image 'node:16.13.1-alpine'
@@ -16,27 +16,14 @@ pipeline {
                 }
             }
             steps {
-                sh 'node --version'
-                sh 'yarn --version'
-            }
-        }
-        stage('Checkout repository') {
-                    steps {
-                        // You can choose to clean workspace before build as follows
-                        cleanWs()
-                        checkout scm
-                    }
-        }
-        stage("Initialize") {
-            steps {
-                sh 'npm install'
-                sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
+                   sh 'npm install'
+                   sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
+               }
             }
         }
         stage("Feature tests") {
             steps {
                 echo 'we are running scenarios'
-
             }
         }
     }
