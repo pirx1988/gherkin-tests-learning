@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
         string(name: 'SUITE_ACCOUNT', defaultValue: '', description: 'Account on which scenario/scenarios will be executed')
@@ -14,9 +14,6 @@ pipeline {
                     image 'node:16.13.1-alpine'
                 }
             }
-            steps {
-                 sh 'npm install'
-            }
         }
         stage('Checkout repository') {
                     steps {
@@ -27,6 +24,7 @@ pipeline {
         }
         stage("Initialize") {
             steps {
+                sh 'npm install'
                 sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
         }
