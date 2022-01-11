@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker {image 'node:12-stretch'}
+        docker {image 'node:16.13.1-alpine'}
     }
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
