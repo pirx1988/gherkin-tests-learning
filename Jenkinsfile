@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker {image 'node:16.13.1-alpine'}
-    }
+    agent any
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
         string(name: 'SUITE_ACCOUNT', defaultValue: '', description: 'Account on which scenario/scenarios will be executed')
@@ -10,6 +8,9 @@ pipeline {
 
     }
     stages {
+        agent {
+            docker { image 'node:16.13.1-alpine' }
+        }
         stage('Checkout repository') {
                     steps {
                         // You can choose to clean workspace before build as follows
