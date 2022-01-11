@@ -14,6 +14,9 @@ pipeline {
                     image 'node:16.13.1-alpine'
                 }
             }
+            steps {
+                 sh 'npm install'
+            }
         }
         stage('Checkout repository') {
                     steps {
@@ -24,7 +27,6 @@ pipeline {
         }
         stage("Initialize") {
             steps {
-                sh 'npm install'
                 sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
         }
