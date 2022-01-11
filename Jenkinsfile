@@ -16,14 +16,22 @@ pipeline {
                 }
             }
             steps {
-                   sh 'npm install'
-                   sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
-               }
+                sh 'node --version'
+                sh 'npm install'
+                sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
+        }
+        stage('Checkout repository') {
+                    steps {
+                        // You can choose to clean workspace before build as follows
+                        cleanWs()
+                        checkout scm
+                    }
         }
         stage("Feature tests") {
             steps {
                 echo 'we are running scenarios'
+
             }
         }
     }
