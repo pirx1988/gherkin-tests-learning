@@ -21,7 +21,6 @@ pipeline {
         }
         stage("Install node modules and create .env") {
             steps {
-                sh 'wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
                 sh 'apt-get update'
                 sh 'npm install'
                 sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
