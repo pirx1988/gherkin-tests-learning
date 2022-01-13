@@ -29,6 +29,7 @@ pipeline {
         }
         stage("Install node modules and create .env") {
             steps {
+                sh 'apt-get update && apt-get install -yq firefox-esr'
                 sh 'npm install'
                 sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
@@ -37,7 +38,6 @@ pipeline {
             steps {
                 echo 'we are running scenarios'
                 sh 'wdio wdio.conf.ts'
-
             }
         }
     }
