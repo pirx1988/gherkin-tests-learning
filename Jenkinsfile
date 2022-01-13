@@ -11,7 +11,7 @@ pipeline {
         stage('Docker container initialize') {
             agent {
                 docker {
-                     image 'node:16-stretch'
+                     image 'node:17.3-buster'
                     reuseNode true
                 }
             }
@@ -20,16 +20,11 @@ pipeline {
                 sh 'yarn --version'
             }
         }
-        stage('Checkout repository') {
-                    steps {
-                        // You can choose to clean workspace before build as follows
-                        cleanWs()
-                        checkout scm
-                    }
-        }
         stage("Install node modules and create .env") {
             steps {
-                sh 'apt-get update && apt-get install -yq firefox-esr'
+                sh 'apt-get update && apt-get install -yq fonts-liberation libasound2 libatk-bridge2.0-0 libatspi2.0-0 libcups2 libdbus-1-3 libdrm2 libgbm1 libgtk-3-0 libgtk-4-1 libnspr4 libnss3 libxcomposite1 libxdamage1 libxfixes3 libxkbcommon0 libxrandr2 xdg-utils'
+                sh 'wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+                sh 'dpkg -i google-chrome-stable_current_amd64.deb'
                 sh 'npm install'
                 sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
@@ -37,7 +32,6 @@ pipeline {
         stage("Feature tests") {
             steps {
                 echo 'we are running scenarios'
-                sh 'wdio wdio.conf.ts'
             }
         }
     }
