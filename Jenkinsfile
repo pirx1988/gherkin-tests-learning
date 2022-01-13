@@ -36,6 +36,7 @@ pipeline {
         stage("Feature tests") {
             steps {
                 echo 'we are running scenarios'
+                sh 'wdio wdio.conf.ts'
 
             }
         }
