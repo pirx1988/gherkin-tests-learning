@@ -1,10 +1,10 @@
 pipeline {
     agent {
-                docker {
-                    image 'node:16-stretch'
-                    reuseNode true
-                }
+        docker {
+             image 'node:16-stretch'
+             reuseNode true
         }
+    }
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
         string(name: 'SUITE_ACCOUNT', defaultValue: '', description: 'Account on which scenario/scenarios will be executed')
@@ -18,13 +18,6 @@ pipeline {
                 sh 'node --version'
                 sh 'yarn --version'
             }
-        }
-        stage('Checkout repository') {
-                    steps {
-                        // You can choose to clean workspace before build as follows
-                        cleanWs()
-                        checkout scm
-                    }
         }
         stage("Install node modules and create .env") {
             steps {
