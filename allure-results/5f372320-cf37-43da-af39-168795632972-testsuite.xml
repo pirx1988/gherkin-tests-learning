@@ -1,0 +1,145 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1642069370055' stop='1642069376374'>
+    <name>Test End to End User: Validate End to End Get Single User</name>
+    <title>Test End to End User: Validate End to End Get Single User</title>
+    <test-cases>
+        <test-case start='1642069370056' status='passed' stop='1642069370058'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-97.0.4692.71'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1642069370059' status='passed' stop='1642069376344'>
+            <name>Given I am on the page http://resttesttest.com</name>
+            <title>Given I am on the page http://resttesttest.com</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-97.0.4692.71'/>
+            </parameters>
+            <steps>
+                <step start='1642069370062' status='passed' stop='1642069371340'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='6e0eb1d7-47e6-41be-a26e-44ccd9c94bca-attachment.json' type='application/json' size='39'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1642069376344' status='broken' stop='1642069376371'>
+            <name>When I Perform /api/users/2 user search</name>
+            <title>When I Perform /api/users/2 user search</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-97.0.4692.71'/>
+            </parameters>
+            <steps>
+                <step start='1642069376347' status='broken' stop='1642069376371'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='54da25b1-ec89-4c05-bf85-76ac3d507229-attachment.json' type='application/json' size='53'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>no such window: no such window: target window already closed</message>
+                <stack-trace>no such window: no such window: target window already closed
+                from unknown error: web view not found
+                  (Session info: chrome=97.0.4692.71)
+                    at Object.getErrorFromResponseBody (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/webdriver/build/utils.js:189:12)
+                    at NodeJSRequest._request (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/webdriver/build/request/index.js:157:31)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at Browser.wrapCommandFn (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@wdio/utils/build/shim.js:103:29)
+                    at Browser.$ (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/webdriverio/build/commands/browser/$.js:83:17)
+                    at Browser.wrapCommandFn (/home/krzysztofmichalski/projects/cucumber-gherking-learning/node_modules/@wdio/utils/build/shim.js:103:29)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1642069376371' status='undefined'>
+            <name>And I make Get /api/users/2 api call</name>
+            <title>And I make Get /api/users/2 api call</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-97.0.4692.71'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1642069376371' status='pending' stop='1642069376371'>
+            <name>I make Get /api/users/2 api call</name>
+            <title>I make Get /api/users/2 api call</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1642069376372' status='undefined'>
+            <name>Then I validate the serach result</name>
+            <title>Then I validate the serach result</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-97.0.4692.71'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1642069376372' status='pending' stop='1642069376372'>
+            <name>I validate the serach result</name>
+            <title>I validate the serach result</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1642069376372' status='passed' stop='1642069376373'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-97.0.4692.71'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

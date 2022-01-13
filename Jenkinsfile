@@ -29,7 +29,6 @@ pipeline {
         }
         stage("Install node modules and create .env") {
             steps {
-                sh 'apt-get update && install chromium'
                 sh 'npm install'
                 sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
             }
@@ -37,7 +36,7 @@ pipeline {
         stage("Feature tests") {
             steps {
                 echo 'we are running scenarios'
-
+                sh 'wdio wdio.conf.ts'
             }
         }
     }
