@@ -1,7 +1,6 @@
 pipeline {
     agent {
                 docker {
-                    registryCredentialsId 'dockerhub-read'
                     image 'node:16-stretch'
                     reuseNode true
                 }
