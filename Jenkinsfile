@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-       SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
+       SECRET_ID = credentials('test')
     }
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
