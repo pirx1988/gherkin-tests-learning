@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+       SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
+    }
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
         string(name: 'SUITE_ACCOUNT', defaultValue: '', description: 'Account on which scenario/scenarios will be executed')
@@ -19,9 +22,7 @@ pipeline {
             }
         }
         stage("Initialize") {
-             environment {
-                               SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
-             }
+
              steps {
                         sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT} ${SECRET_ID}"
              }
