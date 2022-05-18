@@ -20,5 +20,10 @@ pipeline {
 
             }
         }
+        stage("Initialize") {
+             steps {
+                        sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT} ${SECRET_ID}"
+             }
+        }
     }
 }
