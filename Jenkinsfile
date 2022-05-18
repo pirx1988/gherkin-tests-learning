@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-           docker {
-               image 'node:17.3-buster'
-               reuseNode true
-            }
-    }
+
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
         string(name: 'SUITE_ACCOUNT', defaultValue: '', description: 'Account on which scenario/scenarios will be executed')
@@ -23,18 +18,6 @@ pipeline {
                 sh 'yarn --version'
                 echo '$SECRET_ID'
 
-            }
-        }
-        stage("Install node modules and create .env") {
-            steps {
-                sh 'apt-get update'
-                sh 'npm install'
-                sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT}"
-            }
-        }
-        stage("Feature tests") {
-            steps {
-                echo 'we are running scenarios'
             }
         }
     }
