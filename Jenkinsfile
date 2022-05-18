@@ -10,9 +10,7 @@ pipeline {
     }
     stages {
         stage('Docker container initialize') {
-             environment {
-                  SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
-             }
+
             steps {
                 sh 'node --version'
                 sh 'yarn --version'
@@ -21,6 +19,9 @@ pipeline {
             }
         }
         stage("Initialize") {
+             environment {
+                               SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
+             }
              steps {
                         sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT} ${SECRET_ID}"
              }
