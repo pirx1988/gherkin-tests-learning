@@ -17,11 +17,12 @@ pipeline {
         stage('Docker container initialize') {
              environment {
                   SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
-                  echo '$SECRET_ID'
              }
             steps {
                 sh 'node --version'
                 sh 'yarn --version'
+                echo '$SECRET_ID'
+
             }
         }
         stage("Install node modules and create .env") {
