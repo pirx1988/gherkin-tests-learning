@@ -17,14 +17,14 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'yarn --version'
-                echo SECRET_ID
+                sh "echo $SECRET_ID"
 
             }
         }
         stage("Initialize") {
 
              steps {
-                        sh './init.sh $params.Environment $params.X_VAULT_TOKEN $params.SUITE_ACCOUNT $SECRET_ID'
+                        sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT} ${SECRET_ID}"
              }
         }
     }
