@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-       SECRET_ID = credentials('test')
+       SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
     }
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
@@ -17,14 +17,13 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'yarn --version'
-                sh "echo $SECRET_ID"
 
             }
         }
         stage("Initialize") {
 
              steps {
-                        sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT} $SECRET_ID"
+                 sh "./init.sh ${params.Environment} ${params.X_VAULT_TOKEN} ${params.SUITE_ACCOUNT} $SECRET_ID"
              }
         }
     }
