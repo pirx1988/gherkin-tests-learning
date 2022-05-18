@@ -7,7 +7,7 @@ BASE_APP_URL=""
 ENVIRONMENT=$1
 X_VAULT_TOKEN=$2
 SUITE_ACCOUNT=$3
-$ROLE_ID=$4
+ROLE_ID=$4
 VAULT_BASE_URL="https://vault-wf1.wfsaas.net"
 ENV_FILENAME=".env.dev"
 
