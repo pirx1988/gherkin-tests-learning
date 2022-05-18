@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'yarn --version'
-                echo $SECRET_ID
+                echo SECRET_ID
 
             }
         }
