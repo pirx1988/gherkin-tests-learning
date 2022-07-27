@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    def sendToSlack(String message) {
-        echo 'sended'
-    }
     environment {
        SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
 
@@ -41,4 +38,8 @@ pipeline {
             echo 'failure'
         }
     }
+}
+
+def sendToSlack(String message) {
+        echo 'sended'
 }
