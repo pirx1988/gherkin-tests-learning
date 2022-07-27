@@ -16,7 +16,7 @@ pipeline {
         stage('Docker container initialize') {
 
             steps {
-                sh 'node --version'
+                sh 'node --versionsssssssssss'
                 sh 'yarn --version'
 
             }
@@ -35,7 +35,7 @@ pipeline {
             }
         }
         failure {
-            echo 'failure'
+            echo 'failure. Something wen wrong!!!!!!'
         }
     }
 }
