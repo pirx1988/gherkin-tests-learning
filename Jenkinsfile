@@ -1,7 +1,11 @@
 pipeline {
     agent any
+    def sendToSlack(String message) {
+        echo 'sended'
+    }
     environment {
        SECRET_ID = credentials('approle-suite-sanity-automation-us8-lat-readonly-secret_id')
+
     }
     parameters {
         string(name: 'X_VAULT_TOKEN', defaultValue: '', description: 'Token for connection with Vault')
@@ -29,7 +33,9 @@ pipeline {
     }
     post {
         success {
-            echo 'success'
+            script {
+                sendToSlack('build success!')
+            }
         }
         failure {
             echo 'failure'
