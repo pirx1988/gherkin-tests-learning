@@ -36,10 +36,11 @@ pipeline {
         }
         failure {
             echo 'failure. Something wen wrong!!!!!!'
+            sendToSlack('BUILD IS WRONG!!!!')
         }
     }
 }
 
 def sendToSlack(String message) {
-        echo 'sended'
+        echo message
 }
